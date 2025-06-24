@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - UAS Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#portofolio" class="active">Protofolio</a></li>
+                <li><a href="#hai">Hai</a></li>
+                <li><a href="#pendidikan">Pendidikan</a></li>
+                <li><a href="#pengalaman">Pengalaman</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="portofolio" class="content-section">
+            <div class="content-box">
+                <h1>Portofolio<br>(Uas Pemrograman Web)</h1>
+                <div class="info-box">
+                    <p>Nama : Natalia D Ngilawana</p>
+                    <p>NPM : 12155201230132</p>
+                    <p>Kelas Pemograman web .......</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hai" class="content-section hidden">
+            <div class="section-title">Hai</div>
+            <div class="content-box">
+                <div class="profile-image-container">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\profil.jpg" alt="Profile Picture" class="profile-image">
+                </div>
+                <div class="about-me-box">
+                    <p>Hallo, nama saya Natalia Dortjie Ngilawana. Saya berasal dari Tanimbar. 
+                        Saat ini saya sedang menempuh pendidikan Universitas Kristen Maluku.
+                        Saya suka belajar hal-hal baru, terutama di bidang Desain Grafis. 
+                        Saya juga senang Memasak Dan Mencoba resep yang berbeda
+
+</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pendidikan" class="content-section hidden">
+            <div class="section-title">Pendidikan</div>
+            <div class="content-grid">
+                <div class="grid-item">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\foto SD.jpg" alt="Education 1">
+                    <div class="about-me-box-small">
+                        <p>Hallo Sekolah Dasar Saya di SD KRISTEN BATUPUTIH Beralamat di Kecamatan.Wermaktian, Kabupaten Kepulauan Tanimbar</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\Foto SMP.jpg" alt="Education 2">
+                    <div class="about-me-box-small">
+                        <p>Sekolah Menengah Pertama Saya  di SMP KRISTEN BATUPUTIH. Beralamat di Kecamatan.Wermaktian, Kabupaten Kepulauan Tanimbar</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\Foto SMA.jpg" alt="Education 3">
+                    <div class="about-me-box-small">
+                        <p>Sekolah Menengah Atas Saya di SMA Negeri Siwalima Ambon. Beralamat di WAINAPU, Waiheru, Kecamatan. Baguala, Kota Ambon Prov. Maluku</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pengalaman" class="content-section hidden">
+            <div class="section-title">Pengalaman</div>
+            <div class="content-grid-experience">
+                <div class="experience-text-box">
+                    <p>saya Mengikuti pelatihan IT yaitu Desain Grafis, Digital Marketing, dan Foto Editing. yang di selengarakan oleh PT.(PP). 
+                        MALUCCAS CREATIVE DEVELOPMENT TEAM. Saya salah satu dari peserta mendapatkan 3 serifikat yang diberikan langsung oleh Penyelenggara Pelatihan IT yaitu kk Viany Juniaty Huwae, S.KOM</p>
+                </div>
+                <div class="grid-item">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\Natalia1.jpg" alt="Experience 1">
+                </div>
+                <div class="grid-item">
+                    <img src="C:\Users\ACER\Music\uas.pemograman\Natalia3.jpg" alt="Experience 2">
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="content-section hidden">
+            <div class="section-title">Kontak</div>
+            <div class="contact-links">
+                <div class="contact-box">
+                    <i class="C:\Users\ACER\Music\uas.pemograman\instagram.jpg"></i> halo@lyaa_2612
+                </div>
+                <div class="contact-box">
+                    <i class="C:\Users\ACER\Music\uas.pemograman\tiktok.png"></i> halo@Tlyaaa.2612
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            const sections = document.querySelectorAll('.content-section');
+
+            function showSection(id) {
+                sections.forEach(section => {
+                    section.classList.add('hidden');
+                });
+                document.getElementById(id).classList.remove('hidden');
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                document.querySelector(`nav ul li a[href="#${id}"]`).classList.add('active');
+            }
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = e.target.getAttribute('href').substring(1);
+                    showSection(targetId);
+                });
+            });
+
+            // Show the initial section (Portofolio)
+            showSection('portofolio');
+        });
+    </script>
+</body>
+</html>

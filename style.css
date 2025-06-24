@@ -1,0 +1,302 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a5acd, #da70d6); /* Purple to Pink gradient */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    display: block;
+    background-color: #6a5acd; /* MediumSlateBlue for buttons */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #8a2be2; /* BlueViolet for hover/active */
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content-section {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white for main boxes */
+    border-radius: 25px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Portofolio Section */
+#portofolio .content-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#portofolio .info-box {
+    background-color: #ffb6c1; /* LightPink for info box */
+    border-radius: 10px;
+    padding: 20px;
+    display: inline-block; /* To make it wrap content */
+    text-align: left;
+    margin-top: 20px;
+    color: #333;
+}
+
+#portofolio .info-box p {
+    margin: 5px 0;
+}
+
+/* Hai Section */
+#hai .section-title {
+    background-color: #6a5acd; /* MediumSlateBlue for button-like title */
+    color: white;
+    padding: 5px 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+#hai .content-box {
+    background-color: #ffb6c1; /* LightPink for main content box */
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container {
+    border-radius: 15px; /* Slightly rounded corners */
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners for the image itself */
+}
+
+.about-me-box {
+    background-color: white; /* White background for text box */
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    min-height: 60px; /* Placeholder height */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pendidikan Section */
+#pendidikan .section-title {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: #ffb6c1; /* LightPink for each grid item */
+    border-radius: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.about-me-box-small {
+    background-color: rgb(240, 238, 240);
+    border-radius: 15px;
+    padding: 15px;
+    width: 90%;
+    min-height: 60px; /* Placeholder height */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Pengalaman Section */
+#pengalaman .section-title {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.content-grid-experience {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 30px;
+    width: 100%;
+}
+
+.experience-text-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Matches main content box background */
+    border-radius: 25px;
+    padding: 30px;
+    min-height: 250px; /* To match image height */
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Adjust grid item for experience to be same as others if needed, but the image is directly inside */
+#pengalaman .grid-item {
+    background-color: transparent; /* No background for image boxes */
+    padding: 0;
+    box-shadow: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pengalaman .grid-item img {
+    width: 100%;
+    height: 250px; /* Fixed height for consistency */
+    object-fit: cover;
+    border-radius: 25px; /* Match container border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to images */
+}
+
+
+/* Kontak Section */
+#kontak .section-title {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-box {
+    background-color: #ffb6c1; /* LightPink for contact boxes */
+    border-radius: 25px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box i {
+    font-size: 1.5em;
+    color: #8a2be2; /* BlueViolet for icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    .content-section {
+        padding: 20px;
+        width: 90%;
+    }
+
+    #portofolio .content-box h1 {
+        font-size: 1.8em;
+    }
+
+    #hai .content-box {
+        padding: 10px;
+    }
+
+    .content-grid, .content-grid-experience {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+
+    .experience-text-box {
+        min-height: auto; /* Allow height to adjust */
+    }
+}
